@@ -6,7 +6,7 @@ node{
 
       def mvnHome =  tool name: 'maven3', type: 'maven'   
       sh "${mvnHome}/bin/mvn clean package"
-	  sh 'mv target/webapp*.war target/myapp.war'
+	  sh 'mv target/myweb*.war target/myapp.war'
    }
    stage('SonarQube Analysis') {
 	        def mvnHome =  tool name: 'maven3', type: 'maven'
